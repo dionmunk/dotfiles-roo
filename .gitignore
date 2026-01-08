@@ -1,0 +1,55 @@
+# =========================
+# macOS system files
+# =========================
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._.DS_Store
+
+# =========================
+# Finder / volume metadata
+# =========================
+
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# =========================
+# Network / remote shares
+# =========================
+
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+
+# =========================
+# iCloud
+# =========================
+
+*.icloud
+
+# =========================
+# macOS application caches
+# =========================
+
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+
+# =========================
+# Crash & diagnostic files
+# =========================
+
+*.crash
+*.diag
+*.dSYM
