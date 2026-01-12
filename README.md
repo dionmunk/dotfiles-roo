@@ -40,11 +40,12 @@ Custom commands are stored in the [`commands/`](commands/) directory. Each comma
 
 ### Project Memory System
 
-- **[`init-memory.md`](commands/init-memory.md)** - Creates project memory bank (`.memory/`)
-  - Scaffolds persistent project context structure
-  - Includes templates for briefs, patterns, decisions, and progress tracking
-  - Sets up imports directory for reference material
-  - Creates enforcement rules in `.roo/rules/`
+- **[`init-memory-bank.md`](commands/init-memory-bank.md)** - Creates project memory bank (`memory-bank/`)
+  - Scaffolds persistent project context structure with standardized templates
+  - Includes `memory-bank/imports/` directory for external reference material
+    - Subdirectories: `api/`, `schemas/`, `diagrams/`, `references/`
+  - Creates enforcement rules in `.roo/rules/` that require consultation of memory bank
+  - Includes manifest and documentation for imported references
 
 - **[`update-active-context.md`](commands/update-active-context.md)** - Refreshes active context from recent work
   - Updates current focus and recent changes
@@ -76,7 +77,7 @@ Commands can be invoked in Roo Code using the `/` slash command syntax:
 ```
 /git-commit
 /git-code-review
-/init-memory
+/init-memory-bank
 ```
 
 Roo Code automatically loads commands from `~/.roo/commands/` and makes them available in all projects.
@@ -133,4 +134,4 @@ Feel free to modify these commands to suit your workflow. Common customizations 
 
 **Location**: `~/.roo/`  
 **Maintained by**: Personal configuration  
-**Last Updated**: 2026-01-08
+**Last Updated**: 2026-01-12
