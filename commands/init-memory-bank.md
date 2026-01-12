@@ -1,11 +1,11 @@
 ---
-description: "Create a project memory bank (.memory/) with imports + index, and enforce project memory rules."
+description: "Create a project memory bank (memory-bank/) with imports + index, and enforce project memory rules."
 ---
 
 You are running in a VS Code workspace.
 
 Goal:
-Create a persistent project memory bank under `.memory/` (kebab-case filenames), including an imports area for reference material, plus a project-specific rules file under `.roo/rules/` to enforce consultation of project memory before acting.
+Create a persistent project memory bank under `memory-bank/` (kebab-case filenames), including an imports area for reference material, plus a project-specific rules file under `.roo/rules/` to enforce consultation of project memory before acting.
 
 Rules:
 - Do NOT overwrite existing files.
@@ -15,37 +15,37 @@ Rules:
 - After completion, print a short summary listing what was created vs what already existed.
 
 Steps:
-1) Ensure the `.memory/` directory exists at the workspace root.
-2) Ensure the `.memory/imports/` directory exists at the workspace root.
-3) Ensure the following `.memory/imports/` subdirectories exist:
-   - `.memory/imports/api/`
-   - `.memory/imports/schemas/`
-   - `.memory/imports/diagrams/`
-   - `.memory/imports/references/`
+1) Ensure the `memory-bank/` directory exists at the workspace root.
+2) Ensure the `memory-bank/imports/` directory exists at the workspace root.
+3) Ensure the following `memory-bank/imports/` subdirectories exist:
+   - `memory-bank/imports/api/`
+   - `memory-bank/imports/schemas/`
+   - `memory-bank/imports/diagrams/`
+   - `memory-bank/imports/references/`
 4) Ensure the `.roo/rules/` directory exists at the workspace root.
-5) Ensure the following `.memory/` files exist:
-   - `.memory/README.md`
-   - `.memory/index.md`
-   - `.memory/project-brief.md`
-   - `.memory/product-context.md`
-   - `.memory/active-context.md`
-   - `.memory/system-patterns.md`
-   - `.memory/tech-context.md`
-   - `.memory/progress.md`
-   - `.memory/conventions.md`
-   - `.memory/decisions.md`
-   - `.memory/glossary.md`
+5) Ensure the following `memory-bank/` files exist:
+   - `memory-bank/README.md`
+   - `memory-bank/index.md`
+   - `memory-bank/project-brief.md`
+   - `memory-bank/product-context.md`
+   - `memory-bank/active-context.md`
+   - `memory-bank/system-patterns.md`
+   - `memory-bank/tech-context.md`
+   - `memory-bank/progress.md`
+   - `memory-bank/conventions.md`
+   - `memory-bank/decisions.md`
+   - `memory-bank/glossary.md`
 6) Ensure the following imports README exists:
-   - `.memory/imports/README.md`
+   - `memory-bank/imports/README.md`
 7) Ensure the following rules file exists:
    - `.roo/rules/rules.md`
 
 Templates (use these exactly for newly created files):
 
 ========================
-.memory/README.md
+memory-bank/README.md
 ========================
-# Project Memory (`.memory/`)
+# Project Memory (`memory-bank/`)
 
 This directory contains **persistent project context** shared by humans and automated tools.
 It is the **source of truth** for understanding *why* this project exists, *how* it is built,
@@ -63,7 +63,7 @@ Projects accumulate context faster than code:
 - ongoing work
 - “gotchas” that aren’t obvious from reading files
 
-The `.memory/` directory captures that context in a **structured, version-controlled way** so it:
+The `memory-bank/` directory captures that context in a **structured, version-controlled way** so it:
 - doesn’t live only in people’s heads
 - doesn’t get lost across sessions
 - stays close to the code
@@ -78,7 +78,7 @@ The `.memory/` directory captures that context in a **structured, version-contro
 - Treat them like living documentation, not static specs
 
 ### If you are reviewing a PR:
-- Check whether relevant `.memory/` files were updated
+- Check whether relevant `memory-bank/` files were updated
 - Especially:
   - `active-context.md`
   - `progress.md`
@@ -114,9 +114,9 @@ The `.memory/` directory captures that context in a **structured, version-contro
 
 Additional reference material belongs in:
 
-- `.memory/imports/`
+- `memory-bank/imports/`
 
-See `.memory/imports/README.md` for organization and an import log.
+See `memory-bank/imports/README.md` for organization and an import log.
 
 ---
 
@@ -140,42 +140,42 @@ If your change:
 - changes current focus
 - creates long-term implications
 
-…then it probably requires updating at least one file in `.memory/`.
+…then it probably requires updating at least one file in `memory-bank/`.
 
 Treat missing updates as a documentation bug.
 
 ========================
-.memory/index.md
+memory-bank/index.md
 ========================
 # Project Memory Index
 
 Use this index as a quick jump list.
 
 ## Start Here
-- `.memory/README.md`
+- `memory-bank/README.md`
 
 ## Core Memory
-- `.memory/project-brief.md`
-- `.memory/product-context.md`
-- `.memory/active-context.md`
-- `.memory/system-patterns.md`
-- `.memory/tech-context.md`
-- `.memory/progress.md`
-- `.memory/conventions.md`
-- `.memory/decisions.md`
-- `.memory/glossary.md`
+- `memory-bank/project-brief.md`
+- `memory-bank/product-context.md`
+- `memory-bank/active-context.md`
+- `memory-bank/system-patterns.md`
+- `memory-bank/tech-context.md`
+- `memory-bank/progress.md`
+- `memory-bank/conventions.md`
+- `memory-bank/decisions.md`
+- `memory-bank/glossary.md`
 
 ## Imported References
-- `.memory/imports/README.md`
-- `.memory/imports/api/`
-- `.memory/imports/schemas/`
-- `.memory/imports/diagrams/`
-- `.memory/imports/references/`
+- `memory-bank/imports/README.md`
+- `memory-bank/imports/api/`
+- `memory-bank/imports/schemas/`
+- `memory-bank/imports/diagrams/`
+- `memory-bank/imports/references/`
 
 ========================
-.memory/imports/README.md
+memory-bank/imports/README.md
 ========================
-# Imported References (`.memory/imports/`)
+# Imported References (`memory-bank/imports/`)
 
 This folder contains **supporting reference material** that helps developers and automated tools understand
 the project, but is not part of the core memory files.
@@ -208,11 +208,11 @@ Examples:
 
 ## Notes for Automated Tools
 
-- Treat files in `.memory/imports/` as reference-only unless explicitly instructed otherwise.
+- Treat files in `memory-bank/imports/` as reference-only unless explicitly instructed otherwise.
 - Prefer core memory files for “source of truth” decisions, and use imports to validate details (e.g., API shapes).
 
 ========================
-.memory/project-brief.md
+memory-bank/project-brief.md
 ========================
 # Project Brief
 
@@ -233,7 +233,7 @@ Examples:
 - Constraints, boundaries, assumptions
 
 ========================
-.memory/product-context.md
+memory-bank/product-context.md
 ========================
 # Product Context
 
@@ -254,7 +254,7 @@ Examples:
 - Edge cases
 
 ========================
-.memory/active-context.md
+memory-bank/active-context.md
 ========================
 # Active Context
 
@@ -271,7 +271,7 @@ Examples:
 - Unknowns, blockers, pending decisions
 
 ========================
-.memory/system-patterns.md
+memory-bank/system-patterns.md
 ========================
 # System Patterns
 
@@ -296,7 +296,7 @@ Examples:
 - Auth, permissions, secrets handling
 
 ========================
-.memory/tech-context.md
+memory-bank/tech-context.md
 ========================
 # Tech Context
 
@@ -317,7 +317,7 @@ Examples:
 - Run, test, lint, build
 
 ========================
-.memory/progress.md
+memory-bank/progress.md
 ========================
 # Progress
 
@@ -337,7 +337,7 @@ Examples:
 - Bugs, gaps, refactors needed
 
 ========================
-.memory/conventions.md
+memory-bank/conventions.md
 ========================
 # Conventions
 
@@ -363,7 +363,7 @@ Examples:
   - Modifying authentication or security behavior
 
 ========================
-.memory/decisions.md
+memory-bank/decisions.md
 ========================
 # Decisions
 
@@ -378,7 +378,7 @@ Examples:
 - Consequences / follow-ups
 
 ========================
-.memory/glossary.md
+memory-bank/glossary.md
 ========================
 # Glossary
 
@@ -392,10 +392,10 @@ Examples:
 ========================
 ## Project Memory Requirement (Strict)
 
-Before answering, planning, or modifying code, you **must** consult all relevant files under the `.memory/` directory.
+Before answering, planning, or modifying code, you **must** consult all relevant files under the `memory-bank/` directory.
 
 If required information is missing, outdated, or contradictory, **stop and ask for clarification** before proceeding.
 
-If your proposed action conflicts with guidance in `.memory/`, **explicitly call out the conflict and do not proceed** until it is resolved.
+If your proposed action conflicts with guidance in `memory-bank/`, **explicitly call out the conflict and do not proceed** until it is resolved.
 
-If `.memory/` files cannot be accessed or do not exist, **pause and request confirmation** before continuing.
+If `memory-bank/` files cannot be accessed or do not exist, **pause and request confirmation** before continuing.
