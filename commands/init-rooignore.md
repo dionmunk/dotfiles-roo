@@ -122,7 +122,7 @@ crash.*.log
 .git/
 .gitignore
 
-# Project memory (keep these INCLUDED by default)
-# NOTE: Do NOT ignore .ai/ or .roo/ by default.
-# .memory/
+# Project memory-bank (keep these INCLUDED by default)
+# NOTE: Do NOT ignore .roo/ or memory-bank/ by default.
 # .roo/
+# memory-bank/
