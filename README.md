@@ -32,10 +32,11 @@ Custom commands are stored in the [`commands/`](commands/) directory. Each comma
   - Provides copy-ready commit messages
   - **Safety**: Read-only, never executes git commands
 
-- **[`git-code-review.md`](commands/git-code-review.md)** - Performs senior-level code review of git diff
-  - Brutally critical analysis of changes
-  - Identifies blockers, concerns, and edge cases
-  - Prioritizes security, correctness, and maintainability
+- **[`git-code-review.md`](commands/git-code-review.md)** - Performs comprehensive code review of git diff
+  - Constructive and professional analysis of changes
+  - Evaluates code quality, security, performance, and test coverage
+  - Provides specific, actionable feedback prioritized by severity
+  - Acknowledges strengths while identifying improvement areas
   - **Safety**: Read-only, never modifies code
 
 ### Project Memory System
@@ -134,4 +135,4 @@ Feel free to modify these commands to suit your workflow. Common customizations 
 
 **Location**: `~/.roo/`  
 **Maintained by**: Personal configuration  
-**Last Updated**: 2026-01-12
+**Last Updated**: 2026-01-17
