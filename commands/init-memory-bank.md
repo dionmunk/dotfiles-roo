@@ -1,11 +1,11 @@
 ---
-description: "Create a project memory bank (memory-bank/) with imports + index, and enforce project memory rules."
+description: "Create a project memory bank (memory-bank/) with imports + index."
 ---
 
 You are running in a VS Code workspace.
 
 Goal:
-Create a persistent project memory bank under `memory-bank/` (kebab-case filenames), including an imports area for reference material, plus a project-specific rules file under `.roo/rules/` to enforce consultation of project memory before acting.
+Create a persistent project memory bank under `memory-bank/` (kebab-case filenames), including an imports area for reference material.
 
 Rules:
 - Do NOT overwrite existing files.
@@ -22,8 +22,7 @@ Steps:
    - `memory-bank/imports/schemas/`
    - `memory-bank/imports/diagrams/`
    - `memory-bank/imports/references/`
-4) Ensure the `.roo/rules/` directory exists at the workspace root.
-5) Ensure the following `memory-bank/` files exist:
+4) Ensure the following `memory-bank/` files exist:
    - `memory-bank/README.md`
    - `memory-bank/index.md`
    - `memory-bank/project-brief.md`
@@ -35,10 +34,8 @@ Steps:
    - `memory-bank/conventions.md`
    - `memory-bank/decisions.md`
    - `memory-bank/glossary.md`
-6) Ensure the following imports README exists:
+5) Ensure the following imports README exists:
    - `memory-bank/imports/README.md`
-7) Ensure the following rules file exists:
-   - `.roo/rules/rules.md`
 
 Templates (use these exactly for newly created files):
 
@@ -387,15 +384,3 @@ memory-bank/glossary.md
 - Term: Definition
 - Term: Definition
 
-========================
-.roo/rules/rules.md
-========================
-## Project Memory Requirement (Strict)
-
-Before answering, planning, or modifying code, you **must** consult all relevant files under the `memory-bank/` directory.
-
-If required information is missing, outdated, or contradictory, **stop and ask for clarification** before proceeding.
-
-If your proposed action conflicts with guidance in `memory-bank/`, **explicitly call out the conflict and do not proceed** until it is resolved.
-
-If `memory-bank/` files cannot be accessed or do not exist, **pause and request confirmation** before continuing.
